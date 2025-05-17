@@ -1,0 +1,605 @@
+{
+	"info": {
+		"_postman_id": "7ef8b6d8-8a12-4e2d-975e-3e026f0d2f56",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13469752",
+		"_collection_link": "https://warped-space-663671.postman.co/workspace/Team-Workspace~c5aeef0b-38cf-4f5e-83f6-ec89154b05c7/collection/13469752-7ef8b6d8-8a12-4e2d-975e-3e026f0d2f56?action=share&source=collection_link&creator=13469752"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "users/get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tYnJlIjoiZGllZ28iLCJlbWFpbCI6ImRpZWdvZCIsInJvbF9pZCI6MSwicGVybWlzb3MiOlsxXSwiYWRtaW5pc3RyYWRvcl9pZCI6MSwiaWF0IjoxNzQ1NzE4MDAzLCJleHAiOjE3NDU3MjE2MDN9.AFURRLVCcSByyauJ3FxhsRX67B0GmcqGsRzDHM1FYL8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tYnJlIjoiZGllZ28iLCJlbWFpbCI6ImRpZWdvZCIsInJvbF9pZCI6MSwicGVybWlzb3MiOlsxXSwiYWRtaW5pc3RyYWRvcl9pZCI6MSwiaWF0IjoxNzQ1NzE4MDAzLCJleHAiOjE3NDU3MjE2MDN9.AFURRLVCcSByyauJ3FxhsRX67B0GmcqGsRzDHM1FYL8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"diegod2\",\n    \"email\": \"dieggoooo\",\n    \"password\": \"123456\",\n    \"rol_id\": 1,\n    \"administrador_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/rol",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tYnJlIjoiZGllZ28iLCJlbWFpbCI6ImRpZWdvZCIsInJvbF9pZCI6MSwicGVybWlzb3MiOlsxXSwiYWRtaW5pc3RyYWRvcl9pZCI6MSwiaWF0IjoxNzQ1NzE4MDAzLCJleHAiOjE3NDU3MjE2MDN9.AFURRLVCcSByyauJ3FxhsRX67B0GmcqGsRzDHM1FYL8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/rol/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"rol",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tYnJlIjoiZGllZ28iLCJlbWFpbCI6ImRpZWdvZCIsInJvbF9pZCI6MSwicGVybWlzb3MiOlsxXSwiYWRtaW5pc3RyYWRvcl9pZCI6MSwiaWF0IjoxNzQ1NzE4MDAzLCJleHAiOjE3NDU3MjE2MDN9.AFURRLVCcSByyauJ3FxhsRX67B0GmcqGsRzDHM1FYL8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tYnJlIjoiZGllZ28iLCJlbWFpbCI6ImRpZWdvZCIsInJvbF9pZCI6MSwicGVybWlzb3MiOlsxXSwiYWRtaW5pc3RyYWRvcl9pZCI6MSwiaWF0IjoxNzQ1NzE4MDAzLCJleHAiOjE3NDU3MjE2MDN9.AFURRLVCcSByyauJ3FxhsRX67B0GmcqGsRzDHM1FYL8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"diegod2\",\r\n    \"email\": \"diegod\",\r\n    \"rol_id\": 1,\r\n    \"administrador_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "projects",
+			"item": [
+				{
+					"name": "project/create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer c1c5343e42811d4823d7c642d77fe370033ec35a7a49f44bea0ac903f9045b249afc59477a4bdf024fcf01326891fb9cc4745934e3aa4c8b21858400c88cadfc",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"diegod\",\n    \"descripcion\": \"dieggoooo\",\n    \"administrador_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/projects/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/get",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tYnJlIjoiZGllZ28iLCJlbWFpbCI6ImRpZWdvZCIsInJvbF9pZCI6MSwicGVybWlzb3MiOlsxXSwiYWRtaW5pc3RyYWRvcl9pZCI6MSwiaWF0IjoxNzQ1NzE4MDAzLCJleHAiOjE3NDU3MjE2MDN9.AFURRLVCcSByyauJ3FxhsRX67B0GmcqGsRzDHM1FYL8"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tYnJlIjoiZGllZ28iLCJlbWFpbCI6ImRpZWdvZCIsInJvbF9pZCI6MSwicGVybWlzb3MiOlsxXSwiYWRtaW5pc3RyYWRvcl9pZCI6MSwiaWF0IjoxNzQ1NzE4MDAzLCJleHAiOjE3NDU3MjE2MDN9.AFURRLVCcSByyauJ3FxhsRX67B0GmcqGsRzDHM1FYL8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"diegod\",\r\n    \"descripcion\": \"dieggoo2oo\",\r\n    \"administrador_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/projects/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/getone",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tYnJlIjoiZGllZ28iLCJlbWFpbCI6ImRpZWdvZCIsInJvbF9pZCI6MSwicGVybWlzb3MiOlsxXSwiYWRtaW5pc3RyYWRvcl9pZCI6MSwiaWF0IjoxNzQ1NzE4MDAzLCJleHAiOjE3NDU3MjE2MDN9.AFURRLVCcSByyauJ3FxhsRX67B0GmcqGsRzDHM1FYL8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"diegod\",\n    \"descripcion\": \"dieggoo2oo\",\n    \"administrador_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/projects/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/associate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tYnJlIjoiZGllZ28iLCJlbWFpbCI6ImRpZWdvZCIsInJvbF9pZCI6MSwicGVybWlzb3MiOlsxXSwiYWRtaW5pc3RyYWRvcl9pZCI6MSwiaWF0IjoxNzQ1NzE4MDAzLCJleHAiOjE3NDU3MjE2MDN9.AFURRLVCcSByyauJ3FxhsRX67B0GmcqGsRzDHM1FYL8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"projectId\": 1,\n  \"userIds\": [1]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/projects/associate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"associate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/disassociate",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tYnJlIjoiZGllZ29kIiwiZW1haWwiOiJkaWVnb2QiLCJyb2xfaWQiOjEsInBlcm1pc29zIjpbMV0sImFkbWluaXN0cmFkb3JfaWQiOjEsImlhdCI6MTc0NTcyMjEyMCwiZXhwIjoxNzQ1NzI1NzIwfQ.KS2cmUkw5FzZWSP1hfTgiD1UIEwcffskX28f3RexGV4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"projectId\": 1,\n  \"userIds\": [1]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/projects/disassociate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"disassociate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tYnJlIjoiZGllZ29kIiwiZW1haWwiOiJkaWVnb2QiLCJyb2xfaWQiOjEsInBlcm1pc29zIjpbMV0sImFkbWluaXN0cmFkb3JfaWQiOjEsImlhdCI6MTc0NTcyMjEyMCwiZXhwIjoxNzQ1NzI1NzIwfQ.KS2cmUkw5FzZWSP1hfTgiD1UIEwcffskX28f3RexGV4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"projectId\": 1,\n  \"userIds\": [1]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/projects/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer c1c5343e42811d4823d7c642d77fe370033ec35a7a49f44bea0ac903f9045b249afc59477a4bdf024fcf01326891fb9cc4745934e3aa4c8b21858400c88cadfc"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"diegod\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "TOKEN",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
