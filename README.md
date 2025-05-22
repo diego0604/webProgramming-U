@@ -202,6 +202,17 @@ La colección utiliza las siguientes variables que puedes configurar:
 
 - `token`: Token de autenticación (se establece automáticamente después del login)
 
+## Ejemplo .env para node
+ ```
+ DB_NAME: postgres
+  DB_USER: postgres
+  DB_PASSWORD: root
+  DB_HOST: localhost
+  DB_PORT: 5432
+JWT_SECRET: a91974bdc1eadf1f0af31cbde35d3a9a760497e658d23af7f19b1900f950fd288d4b2ea8f181b76fb912eddb60755372d13df0c3bb93364da9109d1e1f4d04b905179338b819751ee2f94aeb0cc05791c5b0246565950613510f5baf9f732d83b5b2c351a5d7ba8165644b7a946df8e946099e404c66dd79a6f290cccb556d2e
+PORT: 3000
+```
+
 ### Ejecutar Pruebas
 
 1. Primero ejecuta la solicitud "Login" para obtener un token de autenticación
